@@ -89,27 +89,9 @@
     ```
     insmod hello_world_mod.ko
     ```
-
-10.  Check if the module got loaded into the kernel properly. lsmod lists all the currently loaded kernel modules.
-    
+   
+10. Check if the module got loaded into the kernel properly. lsmod lists all the currently loaded kernel modules.
+ 
     ```
-    lsmod | grep "hello_"
-    ```
-
-11.  Check dmesg logs after inserting your kernel module. You will find the hello world module’s init function’s printk message being logged into the dmesg logs.
-    
-    ```
-    dmesg
-    ```
-
-12.  Let’s now remove the hello world kernel module from the kernel. rmmod command is used for that.
-    
-    ```
-    rmmod hello_world_mod
-    ```
-
-13.  Check dmesg logs after removing the kernel module. You will observe that hello world module’s exit function’s printk message also being logged into the dmesg logs.
-    
-    ```
-    dmesg
+    lsmod | grep "hello"
     ```
