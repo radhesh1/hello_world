@@ -8,3 +8,40 @@
    ```
    sudo -i
    ```
+3. Create a new source directory to place the hello world kernel module.
+   ```
+   mkdir kernel_modules
+   ```
+3. Create a new source directory to place the hello world kernel module.
+   ```
+   mkdir kernel_modules
+   ```
+4.  Create your hello world kernel module named “hello_world_mod.c” inside the source directory.
+   ```
+   cd kernel_modules
+   touch hello_world_mod.c
+   ```
+   The content of kernel module named “hello_world_mod.c” :
+   ```
+   #include<linux/module.h>
+   #include<linux/kernel.h>
+      
+   MODULE_LICENSE("GPL");
+   MODULE_AUTHOR("Bharath Reddy");
+   MODULE_DESCRIPTION("A simple hello world module");
+   MODULE_VERSION("0.01");
+   
+   static int __init hello_mod_init(void)
+   {
+           printk(KERN_ALERT "Hello world from kernel!! \n");
+           return 0;
+   }
+   
+   static void __exit hello_mod_exit(void)
+   {
+           printk(KERN_ALERT "Exiting hello world module from kernel !!!\n");
+   }
+   
+   module_init(hello_mod_init);
+   module_exit(hello_mod_exit);
+   ```
