@@ -56,4 +56,6 @@
 6.  Create the make file inside the source directory. This is required to build the kernel module program which shall generate the required .ko file (kernel object).
     
    **Note: Make sure to append the correct .o name to the obj-m variable in the make file (should be similar to the file name used for the kernel module program). As hello_world_mod.c name is used for the kernel module program in this example, the respective object file name hello_world_mod.o needs to be appended to the obj-m variable in make file.**
-
+   ```
+   nano Makefile
+   ```
