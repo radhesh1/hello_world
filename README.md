@@ -45,3 +45,4 @@
     module_init(hello_mod_init);
     module_exit(hello_mod_exit);
     ```
+   **You can observe that we have written a simple kernel module with 2 functions — module init and module exit that shall be called when the kernel module is loaded into(using insmod) and unloaded     from(rmmod)    the kernel respectively**
