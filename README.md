@@ -70,3 +70,11 @@
     ```
 
    **Note: Make sure to append the correct .o name to the obj-m variable in the make file (should be similar to the file name used for the kernel module program). As hello_world_mod.c name is used for the kernel module program in this example, the respective object file name hello_world_mod.o needs to be appended to the obj-m variable in make file.**
+
+7.  Generate hello_world_mod.ko file by running ‘make all’ command in the kernel module source directory.
+    
+    ```
+    make all
+    ```
+    
+   **Note: Make sure to append the correct .o name to the obj-m variable in the make file (should be similar to the file name used for the kernel module program). As hello_world_mod.c name is used for the kernel module program in this example, the respective object file name hello_world_mod.o needs to be appended to the obj-m variable in make file.**
