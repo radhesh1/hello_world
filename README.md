@@ -91,11 +91,10 @@
     ```
     
 10.  Check if the module got loaded into the kernel properly. lsmod lists all the currently loaded kernel modules.
-    
-    ```
-    insmod hello_world_mod.ko
-    ```
 
+    ```
+    hello
+    ```
 11.  Check dmesg logs after inserting your kernel module. You will find the hello world module’s init function’s printk message being logged into the dmesg logs.
    
     ```
