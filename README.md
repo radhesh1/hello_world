@@ -95,3 +95,27 @@
     ```
     lsmod | grep "hello"
     ```
+
+11. Check dmesg logs after inserting your kernel module. You will find the hello world module’s init function’s printk message being logged into the dmesg logs.
+ 
+    ```
+    dmesg
+    ```
+
+12. Let’s now remove the hello world kernel module from the kernel. rmmod command is used for that.
+ 
+    ```
+    rmmod hello_world_mod
+    ```
+
+13. Check dmesg logs after removing the kernel module. You will observe that hello world module’s exit function’s printk message also being logged into the dmesg logs.
+ 
+    ```
+    dmesg
+    ```
+ 
+*Note:*
+
+**    While using printk() make sure to append ‘\n’ at the end of the message to flush the message to dmesg immediately. If ‘\n’ is not used, the output gets buffered and might print jumbled data in dmesg logs.**
+
+*That’s it!! You have written a simple kernel module that prints “Hello World” from the kernel.*
