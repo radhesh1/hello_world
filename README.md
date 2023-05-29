@@ -57,14 +57,3 @@
     
    **Note: Make sure to append the correct .o name to the obj-m variable in the make file (should be similar to the file name used for the kernel module program). As hello_world_mod.c name is used for the kernel module program in this example, the respective object file name hello_world_mod.o needs to be appended to the obj-m variable in make file.*
 
-```
-    nano Makefile
-    ```
-    ```
-    obj-m += hello_world_mod.o
-    
-    all:
-         make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
-    clean:
-         make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
-    ```
