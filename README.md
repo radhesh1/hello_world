@@ -114,8 +114,8 @@
     dmesg
     ```
  
-*Note:*
+***Note:***
 
 **While using printk() make sure to append ‘\n’ at the end of the message to flush the message to dmesg immediately. If ‘\n’ is not used, the output gets buffered and might print jumbled data in dmesg logs.**
 
-*That’s it!! You have written a simple kernel module that prints “Hello World” from the kernel.*
+***That’s it!! You have written a simple kernel module that prints “Hello World” from the kernel.***
