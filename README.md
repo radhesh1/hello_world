@@ -91,7 +91,7 @@
     ```
     
 10.  Check if the module got loaded into the kernel properly. lsmod lists all the currently loaded kernel modules.
-    
+
     ```
     lsmod | grep "hello"
     ```
