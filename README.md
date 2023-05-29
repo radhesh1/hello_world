@@ -89,20 +89,29 @@
     ```
     insmod hello_world_mod.ko
     ```
-    
-10.  Check if the module got loaded into the kernel properly. lsmod lists all the currently loaded kernel modules.
 
+10.  Check if the module got loaded into the kernel properly. lsmod lists all the currently loaded kernel modules.
+    
     ```
-    hello
+    lsmod | grep "hello"
     ```
+
 11.  Check dmesg logs after inserting your kernel module. You will find the hello world module’s init function’s printk message being logged into the dmesg logs.
-   
+    
     ```
     dmesg
     ```
 
-12.   Let’s now remove the hello world kernel module from the kernel. rmmod command is used for that.
+12.  Let’s now remove the hello world kernel module from the kernel. rmmod command is used for that.
     
     ```
-    rmmod hello_world_mod.ko
+    rmmod hello_world_mod
     ```
+
+13.  Check dmesg logs after removing the kernel module. You will observe that hello world module’s exit function’s printk message also being logged into the dmesg logs.
+    
+    ```
+    dmesg
+    ```
+
+   **Note: Make sure to append the correct .o name to the obj-m variable in the make file (should be similar to the file name used for the kernel module program). As hello_world_mod.c name is used for the kernel module program in this example, the respective object file name hello_world_mod.o needs to be appended to the obj-m variable in make file.**
